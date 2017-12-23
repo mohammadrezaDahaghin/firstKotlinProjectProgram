@@ -1,15 +1,20 @@
+import java.io.FileWriter
+
 fun main (args:Array<String>){
+    createFile("book.php","<?php?>")
+    createFile("book.php","include();")
 
-    var t:Int=10
-    t.taghsim()
-    var comment:String="hello"
-    comment.Hello("mohammad")
+
 }
 
-fun Int.taghsim(){
-    println(this/2)
-}
+fun createFile(n:String,comment:String){
+    try {
+        var file=FileWriter(n,true)
+        file.write(comment)
+        file.close()
+    }catch (e:Exception){
+        e.printStackTrace()
+    }
 
-fun String.Hello(n:String){
-    println(this+":"+n)
+
 }
