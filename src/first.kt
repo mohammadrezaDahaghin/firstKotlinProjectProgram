@@ -1,25 +1,22 @@
 fun main (args:Array<String>){
-    var k=kotlin()
-    k.printHello()
-    k.printBye()
+    var m=motor<Int>(40)
+    var m1=motor<String>("hello")
 
+    myprint(12)
+    myprint("salam")
+    myprint(true)
 }
 
-
-interface myInter{
-    fun printHello()
-}
-
-interface myInter1{
-    fun printBye()
-}
-class kotlin():myInter,myInter1{
-    override fun printHello() {
-       println("hello")
+class motor<T>(){
+    var age:T??=null
+    constructor(age:T):this(){
+        this.age=age
+        print("age :$age")
     }
+}
 
-    override fun printBye() {
-        println("bye")
-    }
 
+
+fun <T>myprint(n:T){
+    println("n: $n")
 }
