@@ -1,22 +1,15 @@
 fun main (args:Array<String>){
-    var m=motor<Int>(40)
-    var m1=motor<String>("hello")
 
-    myprint(12)
-    myprint("salam")
-    myprint(true)
+    var t:Int=10
+    t.taghsim()
+    var comment:String="hello"
+    comment.Hello("mohammad")
 }
 
-class motor<T>(){
-    var age:T??=null
-    constructor(age:T):this(){
-        this.age=age
-        print("age :$age")
-    }
+fun Int.taghsim(){
+    println(this/2)
 }
 
-
-
-fun <T>myprint(n:T){
-    println("n: $n")
+fun String.Hello(n:String){
+    println(this+":"+n)
 }
