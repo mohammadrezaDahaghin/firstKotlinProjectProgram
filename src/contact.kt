@@ -23,6 +23,7 @@ class person(){
         this.phoneNum=phoneNum
     }
 
+    //getname
     fun getName():String{
         return name
     }
